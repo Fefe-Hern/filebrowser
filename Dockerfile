@@ -1,4 +1,5 @@
 FROM alpine:latest
+RUN echo "umask 0000" >> /etc/profile
 RUN apk --update add ca-certificates \
                      mailcap \
                      curl \
