@@ -1,5 +1,7 @@
 FROM ghcr.io/linuxserver/baseimage-alpine:3.17
 
+RUN echo "umask 0000" >> /etc/profile
+
 RUN apk --update add ca-certificates \
                      mailcap \
                      curl
